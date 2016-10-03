@@ -47,7 +47,7 @@ public class SwiftAddressBook {
         return ABAddressBookGetAuthorizationStatus()
     }
     
-    public class func requestAccessWithCompletion( completion : (Bool, CFError?) -> Void ) {
+    public func requestAccessWithCompletion( completion : (Bool, CFError?) -> Void ) {
         ABAddressBookRequestAccessWithCompletion(nil) {(let b : Bool, c : CFError!) -> Void in completion(b,c)}
     }
     
