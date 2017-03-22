@@ -208,7 +208,7 @@
 		8550DDA51A892055009B86D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = socialbit;
 				TargetAttributes = {
 					70D1240C1A9C217100FC9E1C = {

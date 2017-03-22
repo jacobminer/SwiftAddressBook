@@ -433,7 +433,7 @@ open class SwiftAddressBookPerson : SwiftAddressBookRecord {
 		if(multivalue == nil) {
 			let emptyMultivalue: ABMutableMultiValue = ABMultiValueCreateMutable(ABPersonGetTypeOfProperty(key)).takeRetainedValue()
 			//TODO: handle possible error
-			errorIfNoSuccess { ABRecordSetValue(self.internalRecord, key, emptyMultivalue, $0) }
+			_ = errorIfNoSuccess { ABRecordSetValue(self.internalRecord, key, emptyMultivalue, $0) }
 			return
 		}
 
