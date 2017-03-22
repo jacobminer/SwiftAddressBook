@@ -4,10 +4,10 @@ podfile: Example/Podfile
 
 before_install:
     - gem install cocoapods --quiet
-    - "xcrun instruments -w 'iPhone 5 (10.2)' || true"
+    - "xcrun instruments -w 'iPad Retina (10.2)' || true"
     - sleep 20
     - sleep 20
     - sleep 20
     - perl allowAccess
 script:
-    - "xcodebuild -workspace Example/SwiftAddressBookExample.xcworkspace -scheme SwiftAddressBookTests -sdk iphonesimulator -destination platform='iOS Simulator','OS=10.2',name='iPhone 5' test"
+    - "xcodebuild -workspace Example/SwiftAddressBookExample.xcworkspace -scheme SwiftAddressBookTests -sdk iphonesimulator -destination platform='iOS Simulator','OS=10.2',name='iPad Retina' test"
