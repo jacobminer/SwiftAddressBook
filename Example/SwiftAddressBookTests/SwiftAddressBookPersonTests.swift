@@ -39,7 +39,7 @@ class SwiftAddressBookPersonTests: XCTestCase {
 		/* test with unrotated image */
 		let p = SwiftAddressBookPerson.create()
 
-		let image = UIImage(named: "testImage", in: Bundle.init(for: type(of: self)), compatibleWith: nil)!
+		guard let image = UIImage(named: "testImage") else { return }
 		_ = p.setImage(image)
 		XCTAssertTrue(UIImagePNGRepresentation(image)!.elementsEqual(UIImagePNGRepresentation(p.image!)!),
 			"Images must stay the same after setting and retrieving again")
